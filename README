@@ -39,23 +39,4 @@ Steps to enable:
 	# phytec-lvgldemo-image software image which can be found in 
 	# $BUILDDIR/deploy/images/phyboard-pollux-imx8mp-3)
 
-	# On first boot, you must change the weston graphics framework configuration 
-	# for the touch display to start properly.
-
-		vi /etc/xdg/weston/weston.ini
-
-	# Modify the "[output]" sections of the file to reflect the following:
-
-		...
-		[output]
-		name=HDMI-A-1
-		mode=off
-
-		[output]
-		name=LVDS-1
-		mode=current
-		...
-
-	# Reboot the hardware
-
 	# LVGL demo will start on the touch display automatically upon boot.
